@@ -1,0 +1,77 @@
+/* Default Light Mode Styles */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  color: #333333;
+}
+
+.countdown {
+  font-size: 3em;
+  color: #000000;
+}
+
+#current-date {
+  font-size: 1.2em;
+  color: #555555;
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  h1 {
+    color: #ffffff;
+  }
+
+  .countdown {
+    color: #ffffff;
+  }
+
+  #current-date {
+    color: #bbbbbb;
+  }
+}
+
+/* Light Mode Class */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+h1.light-mode {
+  color: #333333;
+}
+
+.countdown.light-mode {
+  color: #000000;
+}
+
+#current-date.light-mode {
+  color: #555555;
+}
+
+/* Dark Mode Class */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+h1.dark-mode {
+  color: #ffffff;
+}
+
+.countdown.dark-mode {
+  color: #ffffff;
+}
+
+#current-date.dark-mode {
+  color: #bbbbbb;
+}

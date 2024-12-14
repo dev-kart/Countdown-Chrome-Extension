@@ -1,3 +1,39 @@
+// Function to detect theme and apply it
+function detectAndApplyTheme() {
+  const prefersDarkMode = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+
+  // Apply dark or light mode based on system preference
+  if (prefersDarkMode) {
+    document.body.classList.add("dark-mode");
+  } else {
+    document.body.classList.add("light-mode");
+  }
+}
+
+// Function to toggle between dark and light mode manually
+function toggleTheme() {
+  const currentTheme = document.body.classList.contains("dark-mode")
+    ? "dark"
+    : "light";
+
+  if (currentTheme === "dark") {
+    document.body.classList.remove("dark-mode");
+    document.body.classList.add("light-mode");
+  } else {
+    document.body.classList.remove("light-mode");
+    document.body.classList.add("dark-mode");
+  }
+}
+
+// Add event listener for the toggle button
+document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+
+// Apply theme on page load
+detectAndApplyTheme();
+
+// Update countdown logic and apply dark/light mode dynamically
 function updateCountdown() {
   const now = new Date();
   const endOfYear = new Date(now.getFullYear() + 1, 0, 1);

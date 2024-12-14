@@ -1,11 +1,27 @@
 {
   "manifest_version": 3,
   "name": "Year Countdown",
-  "version": "1.1",
-  "description": "Displays a cool countdown to the new year.",
-  "author": "Your Name",
-  "chrome_url_overrides": {
-    "newtab": "index.html"
+  "version": "1.2",
+  "description": "Countdown to the New Year with Light and Dark Mode support.",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    }
   },
-  "permissions": ["storage"]
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  }
 }
