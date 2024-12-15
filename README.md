@@ -11,24 +11,6 @@ A cool Chrome extension that shows a countdown to the end of the year with **lig
 - **Smooth Animation**: Page fades in when the new tab is opened.
 - **Responsive Design**: Adapts to different screen sizes.
 
-## Version History:
-
-### **Version 1.0**
-
-- Basic countdown display with simple time format.
-
-### **Version 1.1**
-
-- Enhanced styling with dynamic background and futuristic font.
-- Countdown timer now includes smooth animations.
-- Display of current date and day of the week added.
-
-### **Version 1.2**
-
-- Added **Light and Dark Mode** support.
-- Users can manually toggle between themes using the "Switch Theme" button.
-- Enhanced responsiveness and theme adaptability.
-
 ## Installation:
 
 1. **Download the Files**: Download the full project files (HTML, JavaScript, and CSS) to your local machine.
