@@ -1,77 +1,168 @@
-/* Default Light Mode Styles */
+/* Base Styles */
 body {
-  background-color: #ffffff;
-  color: #000000;
-  font-family: 'Orbitron', sans-serif;
-  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden; /* Prevent scrolling */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 10px; /* Ensure some padding around the content */
+  box-sizing: border-box;
 }
 
-h1 {
-  color: #333333;
+.container {
+  text-align: center;
+  max-width: 100%;
 }
 
-.countdown {
-  font-size: 3em;
-  color: #000000;
+/* Countdown styles */
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Adjust for small screens */
+  margin-bottom: 15px;
 }
 
-#current-date {
-  font-size: 1.2em;
-  color: #555555;
+.countdown-item {
+  text-align: center;
 }
 
-/* Dark Mode Styles */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #ffffff;
-  }
-
-  h1 {
-    color: #ffffff;
-  }
-
-  .countdown {
-    color: #ffffff;
-  }
-
-  #current-date {
-    color: #bbbbbb;
-  }
+.countdown-element {
+  font-size: 4rem;
+  margin: 0 10px;
 }
 
-/* Light Mode Class */
+.label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.separator {
+  font-size: 4rem;
+}
+
+/* Header Styles */
+.header {
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.style-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.style-label {
+  font-size: 1rem;
+}
+
+.style-dropdown {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.theme-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Theme Icons */
+.sun::before {
+  content: "☀️";
+}
+
+.moon::before {
+  content: "🌙";
+}
+
+/* Themes */
 body.light-mode {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-h1.light-mode {
-  color: #333333;
-}
-
-.countdown.light-mode {
-  color: #000000;
-}
-
-#current-date.light-mode {
-  color: #555555;
-}
-
-/* Dark Mode Class */
 body.dark-mode {
   background-color: #121212;
+  color: #fff;
+}
+
+/* Countdown Styles */
+body.minimalist .countdown-element {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: inherit;
+}
+
+body.bold .countdown-element {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: #ff9800;
+}
+
+body.modern .countdown-element {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: #007bff;
+}
+
+body.classic .countdown-element {
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+  color: #8b4513;
+}
+
+/* Background Colors */
+body.minimalist.light-mode {
+  background-color: #f9f9f9;
+}
+
+body.minimalist.dark-mode {
+  background-color: #1c1c1c;
+}
+
+body.bold.light-mode {
+  background-color: #333;
   color: #ffffff;
 }
 
-h1.dark-mode {
+body.bold.dark-mode {
+  background-color: #000000;
   color: #ffffff;
 }
 
-.countdown.dark-mode {
-  color: #ffffff;
+body.modern.light-mode {
+  background-color: #e0f7fa;
+  color: #005662;
 }
 
-#current-date.dark-mode {
-  color: #bbbbbb;
+body.modern.dark-mode {
+  background-color: #002f36;
+  color: #e0f7fa;
+}
+
+body.classic.light-mode {
+  background-color: #ffe4c4;
+  color: #5a3e26;
+}
+
+body.classic.dark-mode {
+  background-color: #5a3e26;
+  color: #ffe4c4;
 }

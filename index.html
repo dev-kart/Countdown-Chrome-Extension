@@ -3,21 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Year Countdown</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <title>TimeTill</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div>
-    <h1>Countdown to New Year</h1>
-    <div class="countdown">
-      <span id="days">00</span> <span>:</span>
-      <span id="hours">00</span> <span>:</span>
-      <span id="minutes">00</span> <span>:</span>
-      <span id="seconds">00</span>
+  <div class="header">
+    <div class="style-container">
+      <label for="style-select" class="style-label">Change View:</label>
+      <select id="style-select" class="style-dropdown">
+        <option value="minimalist">Minimalist</option>
+        <option value="bold">Bold</option>
+        <option value="modern">Modern</option>
+        <option value="classic">Classic</option>
+      </select>
     </div>
-    <p id="current-date"></p>
-    <button id="theme-toggle">Switch Theme</button>
+    <button id="theme-toggle" class="theme-button">
+      <span id="theme-icon" class="sun"></span>
+    </button>
+  </div>
+  <div class="container">
+    <h1>Countdown to Next Year</h1>
+    <div class="countdown-container">
+      <div class="countdown-item">
+        <div id="days" class="countdown-element">00</div>
+        <span class="label">DD</span>
+      </div>
+      <span class="separator">:</span>
+      <div class="countdown-item">
+        <div id="hours" class="countdown-element">00</div>
+        <span class="label">HH</span>
+      </div>
+      <span class="separator">:</span>
+      <div class="countdown-item">
+        <div id="minutes" class="countdown-element">00</div>
+        <span class="label">MM</span>
+      </div>
+      <span class="separator">:</span>
+      <div class="countdown-item">
+        <div id="seconds" class="countdown-element">00</div>
+        <span class="label">SS</span>
+      </div>
+    </div>
+    <p id="current-date" class="date-display"></p>
   </div>
   <script src="script.js"></script>
 </body>
